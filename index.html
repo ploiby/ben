@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" type="image/x-icon" href="myLogo.ico" />
+        
+    <title>Ben Mooney</title>
+        
+        <style>
+        
+            h2 {
+                
+                font-family: sans-serif;
+                font-size: 40px;
+                text-align: left;
+                line-height: 0px;
+                
+                }
+        /* To bring my name down with user scrolling */
+            .sticky {
+                
+                position: fixed;
+                top: 0;
+                width: 100%;
+                
+            }
+            
+            .content {
+                
+                padding: 16px;
+                
+            }
+            /* Stops jerking of name */
+            .sticky + .content {
+                
+                padding-top: 102px;
+                
+            }
+            
+        </style>
+        
+        
+    </head>
+    
+   
+    
+        
+        
+    
+    
+    <body style="background-color: gainsboro">
+  
+        
+    <div class="h2" id="name">    
+        <h2 style="color: purple">Ben</h2>
+        <h2 style="color: rgb(77, 0, 77)">Mooney</h2>
+       
+        </div>
+        
+        <br>
+        <br>
+        <br>
+        
+        <div class="content">
+        
+        <p>Test</p>
+        <button style="height: 7500px">test</button>
+        
+            </div>
+            
+        <script>
+        
+        // When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var header = document.getElementById("name");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+        
+        </script>   
+        
+    </body>
+    
+</html>
